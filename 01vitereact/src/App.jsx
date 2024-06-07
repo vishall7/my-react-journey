@@ -1,14 +1,21 @@
 
+import { useState } from "react"
 import Mobile from "./Mobile"
 
+const room = {
+  name: "room1",
+  ID: 2,
+  token: "xyz"
+} 
 
 function App() {
-  
-  let name = "vishal"
-
+  const [roomInfo, setRoominfo] = useState(null)  
+  setRoominfo(room)
+  console.log(room);
+  console.log(roomInfo);  
   return (
     <>
-    <h1>hello {name}</h1>
+    <h1>hello {room.name}</h1>
     <Mobile/>
     </>
     
